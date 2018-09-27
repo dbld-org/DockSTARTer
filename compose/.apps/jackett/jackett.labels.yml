@@ -1,0 +1,5 @@
+services:
+  jackett:
+    labels:
+      - traefik.backend=jackett
+      - traefik.frontend.rule=Host:jackett.${TRAEFIK_DOMAIN}

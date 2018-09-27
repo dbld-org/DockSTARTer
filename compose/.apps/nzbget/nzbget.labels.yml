@@ -1,0 +1,5 @@
+services:
+  nzbget:
+    labels:
+      - traefik.backend=nzbget
+      - traefik.frontend.rule=Host:nzbget.${TRAEFIK_DOMAIN}

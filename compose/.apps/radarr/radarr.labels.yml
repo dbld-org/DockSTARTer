@@ -1,0 +1,5 @@
+services:
+  radarr:
+    labels:
+      - traefik.backend=radarr
+      - traefik.frontend.rule=Host:radarr.${TRAEFIK_DOMAIN}

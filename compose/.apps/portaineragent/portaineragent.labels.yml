@@ -1,0 +1,5 @@
+services:
+  portaineragent:
+    labels:
+      - traefik.backend=portaineragent
+      - traefik.frontend.rule=Host:portaineragent.${TRAEFIK_DOMAIN}

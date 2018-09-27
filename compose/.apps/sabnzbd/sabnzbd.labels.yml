@@ -1,0 +1,5 @@
+services:
+  sabnzbd:
+    labels:
+      - traefik.backend=sabnzbd
+      - traefik.frontend.rule=Host:sab.${TRAEFIK_DOMAIN}

@@ -1,0 +1,5 @@
+services:
+  rutorrent:
+    labels:
+      - traefik.backend=rutorrent
+      - traefik.frontend.rule=Host:rutorrent.${TRAEFIK_DOMAIN}

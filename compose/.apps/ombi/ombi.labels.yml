@@ -1,0 +1,5 @@
+services:
+  ombi:
+    labels:
+      - traefik.backend=ombi
+      - traefik.frontend.rule=Host:ombi.${TRAEFIK_DOMAIN}

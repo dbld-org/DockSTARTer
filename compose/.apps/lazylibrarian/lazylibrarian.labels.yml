@@ -1,0 +1,5 @@
+services:
+  lazylibrarian:
+    labels:
+      - traefik.backend=lazylibrarian
+      - traefik.frontend.rule=Host:librarian.${TRAEFIK_DOMAIN}

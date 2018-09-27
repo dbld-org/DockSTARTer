@@ -1,0 +1,5 @@
+services:
+  mylar:
+    labels:
+      - traefik.backend=mylar
+      - traefik.frontend.rule=Host:mylar.${TRAEFIK_DOMAIN}

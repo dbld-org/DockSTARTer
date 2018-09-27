@@ -1,0 +1,5 @@
+services:
+  rtorrentvpn:
+    labels:
+      - traefik.backend=flood
+      - traefik.frontend.rule=Host:flood.${TRAEFIK_DOMAIN}

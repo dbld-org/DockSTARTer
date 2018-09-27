@@ -28,6 +28,10 @@ generate_yml() {
                 echo "${SCRIPTPATH}/compose/.apps/${FILENAME}/${FILENAME}.override.yml \\" >> "${RUNFILE}"
                 info "${SCRIPTPATH}/compose/.apps/${FILENAME}/${FILENAME}.override.yml has been included."
             fi
+            if [[ -f ${SCRIPTPATH}/compose/.apps/${FILENAME}/${FILENAME}.labels.yml ]]; then
+                echo "${SCRIPTPATH}/compose/.apps/${FILENAME}/${FILENAME}.labels.yml \\" >> "${RUNFILE}"
+                info "${SCRIPTPATH}/compose/.apps/${FILENAME}/${FILENAME}.labels.yml has been included."
+            fi
             if [[ -f ${SCRIPTPATH}/compose/.apps/${FILENAME}/${FILENAME}.yml ]]; then
                 if [[ ${ARCH} == "aarch64" ]]; then
                     if [[ -f ${SCRIPTPATH}/compose/.apps/${FILENAME}/${FILENAME}.arm64.yml ]]; then
