@@ -24,8 +24,6 @@ generate_yml() {
         local APPNETMODE
         APPNETMODE=$(run_script 'env_get' "${APPNAME}_NETWORK_MODE")
         if [[ -d ${SCRIPTPATH}/compose/.apps/${FILENAME}/ ]]; then
-<<<<<<< HEAD:.scripts/generate_yml.sh
-=======
             if [[ -f ${SCRIPTPATH}/compose/.apps/${FILENAME}/${FILENAME}.override.yml ]]; then
                 echo "${SCRIPTPATH}/compose/.apps/${FILENAME}/${FILENAME}.override.yml \\" >> "${RUNFILE}"
                 info "${SCRIPTPATH}/compose/.apps/${FILENAME}/${FILENAME}.override.yml has been included."
@@ -34,7 +32,7 @@ generate_yml() {
                 echo "${SCRIPTPATH}/compose/.apps/${FILENAME}/${FILENAME}.labels.yml \\" >> "${RUNFILE}"
                 info "${SCRIPTPATH}/compose/.apps/${FILENAME}/${FILENAME}.labels.yml has been included."
             fi
->>>>>>> bb8d2a4a791f5cabdd2af67a1c62bf105e52643f:scripts/generate_yml.sh
+
             if [[ -f ${SCRIPTPATH}/compose/.apps/${FILENAME}/${FILENAME}.yml ]]; then
                 if [[ ${ARCH} == "aarch64" ]]; then
                     if [[ -f ${SCRIPTPATH}/compose/.apps/${FILENAME}/${FILENAME}.arm64.yml ]]; then
