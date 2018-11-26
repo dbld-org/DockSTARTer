@@ -1,0 +1,5 @@
+services:
+  organizr:
+    labels:
+      - traefik.backend=organizr
+      - traefik.frontend.rule=Host:organizr.${TRAEFIK_DOMAIN}

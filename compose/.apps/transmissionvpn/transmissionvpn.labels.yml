@@ -1,0 +1,5 @@
+services:
+  transmissionvpn:
+    labels:
+      - traefik.backend=transmission
+      - traefik.frontend.rule=Host:transmission.${TRAEFIK_DOMAIN}

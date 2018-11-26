@@ -1,0 +1,5 @@
+services:
+  tautulli:
+    labels:
+      - traefik.backend=tautulli
+      - traefik.frontend.rule=Host:tautulli.${TRAEFIK_DOMAIN}

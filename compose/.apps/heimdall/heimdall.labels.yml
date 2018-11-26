@@ -1,0 +1,5 @@
+services:
+  heimdall:
+    labels:
+      - traefik.backend=heimdall
+      - traefik.frontend.rule=Host:heimdall.${TRAEFIK_DOMAIN}

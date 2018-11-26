@@ -1,0 +1,5 @@
+services:
+  plex:
+    labels:
+      - traefik.backend=plex
+      - traefik.frontend.rule=Host:plex.${TRAEFIK_DOMAIN}
